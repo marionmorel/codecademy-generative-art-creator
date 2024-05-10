@@ -10,8 +10,8 @@ function setup() {
     background(50, 50, 50);
 
   // TODO: Randomize variables used to draw shapes
-    x = Math.floor(windowWidth);
-    y = Math.floor(windowHeight);
+    x = random(width);
+    y = random(height);
     speedX = random(-3, 3);
     speedY = random(-3, 3);
 }
@@ -28,3 +28,9 @@ function draw() {
 
 
 // TODO: Add keyReleased() function to randomize values again on key release
+function keyReleased() {
+    x = random(width);
+    y = random(height);
+    speedX = random(-3, 3);
+    speedY = random(-3, 3);
+}
