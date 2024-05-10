@@ -18,7 +18,15 @@ function setup() {
 
 function draw() {
   // TODO: Map key inputs to various shape drawing functions
-
+    if (keyIsPressed && key !== ' ') {
+        if (keyCode % 5 === 0) {
+            parametricLines();
+        } else if (keyCode % 5 === 1) {
+            bouncingEllipse()
+        } else if (keyCode % 5 === 2) {
+            flower();
+        }
+    }
 }
 
 // TODO: Add keyPressed() function to ensure that the drawing functions don't repeat on single key presses
